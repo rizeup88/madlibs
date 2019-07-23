@@ -1,11 +1,23 @@
 $(document).ready(function() {
+  $('form#formOne').submit(function(event) {
+	var person1Input = $('input#person1').val();
+    var person2Input = $('input#person2').val();
+    var animalInput = $('input#animal').val();
+    var exclamationInput = $('input#exclamation').val();
+    var verbInput = $('input#verb').val();
+    var nounInput = $('input#noun').val();
 
-  $("div#click-one").click(function(event) {
-    var whatToSay = "Hello!";
-    alert(whatToSay);
-  });
+  	$('.person1').text(person1Input);
+    $('.person2').text(person2Input);
+    $('.animal').text(animalInput);
+    $('.exclamation').text(exclamationInput);
+    $('.verb').text(verbInput);
+    $('.noun').text(nounInput);
 
-  $("div#click-two").click(function(event) {
-    alert(whatToSay);
+    $('#story').show();
+
+    console.log("xxx");
+
+    event.preventDefault();
   });
 });
